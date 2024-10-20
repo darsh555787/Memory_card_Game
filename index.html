@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/frog.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #ff6347; text-align: center; font-size: 3em; text-shadow: 2px 2px #ffa07a;">
+            Memory Card Game
+        </h1>
+        <div class="stats" style="text-align: center; margin-bottom: 20px;">
+            <span class="moves" style="font-family: 'Comic Sans MS', cursive, sans-serif;">Moves: <span id="movesCount">0</span></span>
+            <span class="timer" style="font-family: 'Comic Sans MS', cursive, sans-serif; margin-left: 20px;">Time: <span id="timer">00:00</span></span>
+        </div>
+        <div class="game-board" id="gameBoard" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto; max-width: 800px;"></div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="startButton" style="padding: 10px 20px; font-size: 1.2em; background-color: #32cd32; border: none; color: #fff; border-radius: 5px; cursor: pointer; margin-right: 10px;">
+                <i class="fas fa-play"></i> Start Game
+            </button>
+            <button id="restartButton" style="padding: 10px 20px; font-size: 1.2em; background-color: #ff6347; border: none; color: #fff; border-radius: 5px; cursor: pointer;">
+                <i class="fas fa-redo"></i> Restart Game
+            </button>
+        </div>
+    </div>
+    <div id="popup" class="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
+        <div class="popup-content" style="background-color: #fff; padding: 20px; border-radius: 10px; text-align: center; width: 300px;">
+            <h2 id="popupTitle" style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #ff6347;"></h2>
+            <p id="popupMessage" style="font-family: 'Comic Sans MS', cursive, sans-serif;"></p>
+            <button id="popupButton" style="padding: 10px 20px; font-size: 1em; background-color: #ff6347; border: none; color: #fff; border-radius: 5px; cursor: pointer;">
+                Play Again
+            </button>
+        </div>
+    </div>
+    <script>
+        const cardImages = [
+            'https://example.com/cartoon-image1.png', // Cartoon Image 1
+            'https://example.com/cartoon-image2.png', // Cartoon Image 2
+            'https://example.com/cartoon-image3.png', // Cartoon Image 3
+            'https://example.com/cartoon-image4.png', // Cartoon Image 4
+            'https://example.com/cartoon-image5.png', // Cartoon Image 5
+            'https://example.com/cartoon-image6.png', // Cartoon Image 6
+            'https://example.com/cartoon-image7.png', // Cartoon Image 7
+            'https://example.com/cartoon-image8.png'  // Cartoon Image 8
+        ];
+
+        document.getElementById('startButton').addEventListener('click', startGame);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
